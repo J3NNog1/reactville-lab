@@ -14,12 +14,12 @@ const App = () => {
       <Routes>
 
       <Route path="/"
-          element={<Landing daytime={daytime} />}
+          element={<Landing  />}
           />
       <Route path="/burgers"
           element={<BurgerShop />}
           />
-          
+
       </Routes>
     </main>
   )
