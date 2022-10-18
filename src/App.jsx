@@ -6,11 +6,21 @@ import './styles/App.css'
 
 // Components
 import Landing from './Components/Landing/Landing'
+import BurgerShop from './Components/BurgerShop/BurgerShop'
 
 const App = () => {
   return (
     <main>
-      <Landing />
+      <Routes>
+
+      <Route path="/"
+          element={<Landing daytime={daytime} />}
+          />
+      <Route path="/burgers"
+          element={<BurgerShop />}
+          />
+          
+      </Routes>
     </main>
   )
 }
