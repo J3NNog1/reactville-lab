@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../../styles/burger.css'
 
 import IngredientList from './IngredientList'
-
+import BurgerStack from './BurgerStack'
 
 import { ingredients } from '../../data/burger-data'
 
@@ -37,7 +37,7 @@ const BurgerShop = () => {
       </nav>
       <section>
         <IngredientList ingredients={ingredients} stack={stack} addToBurger={addToBurger} />
-        
+        <BurgerStack ingredients={stack} removeFromBurger={removeFromBurger} />
       </section>
     </div>
   )

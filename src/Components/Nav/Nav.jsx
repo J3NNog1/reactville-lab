@@ -10,6 +10,7 @@ const Nav = (props) => {
     <nav className="navigation-bar">
       <NavLink id="logo" to='/'><img src={Logo} alt="react-logo"/></NavLink>
       <NavLink to='/burgers'>BURGER SHOP</NavLink>
+      
 
 
     </nav>
