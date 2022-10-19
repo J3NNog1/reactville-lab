@@ -14,9 +14,15 @@ const App = () => {
   const [cash, setCash] = useState(100)
 
 
+  
+  const handleExchange = (amt) => {
+    // setCash() will be useful here
+  }
+
+
   return (
     <main>
-      <Nav />
+      <Nav cash={cash} setCash={setCash}/>
       <Routes>
 
       <Route 
