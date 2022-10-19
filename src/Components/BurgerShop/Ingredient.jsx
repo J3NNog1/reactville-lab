@@ -2,9 +2,11 @@
 const Ingredient = (props) => {
 	return (
 		<li>
-			Name of ingredient here
-			<button>+</button>
-			<button>X</button>
+			{props.ingredient.name}
+			{props.isList
+				? <button disabled={props.disabled} onClick={() => props.addToBurger(props.ingredient)}>+</button>
+				: <button onClick={() => props.removeFromBurger(props.idx)}>X</button>
+			}
 		</li>
 	)
 }
