@@ -7,7 +7,7 @@ import DisplayProducts from './DisplayProducts'
 import Cart from './Cart'
 import { products } from '../../data/market-data'
 
-const SuperMarket = () => {
+const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
   const [productCategory, setProductCategory] = useState('Produce')
   console.log('Imported product data:::', products)
@@ -16,11 +16,14 @@ const SuperMarket = () => {
   return (
     <div className="super-market">
       <section>
-        <MarketNav />
+        <MarketNav 
+          products={products}
+          setProductCategory={setProductCategory}/>
         <DisplayProducts />
       </section>
 
-      <Cart />
+      <Cart 
+      />
 
     </div>
   )
