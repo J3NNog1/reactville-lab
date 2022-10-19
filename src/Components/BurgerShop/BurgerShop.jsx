@@ -13,7 +13,21 @@ const BurgerShop = () => {
     setStack([...stack, ingredient])
   }
 
+  const removeFromBurger = (idx) => {
+    setStack (stack.filter((ing, i) => i !== idx))
+  }
 
+// Remember, the filter method returns a shallow copy of the array,
+// excluding all elements that do not pass the test implemented by 
+// the provided callback function.
+
+// In the above example, if an element's index matches the
+// index passed as an argument to the function, it will fail
+// the test in our callback, and it will not be included in 
+// our updated stack array state.
+
+// Note, 'ing' (short for ingredient) is just a placeholder param 
+// for an element in the stack array.
 
   return (
     <div className="burger-shop">

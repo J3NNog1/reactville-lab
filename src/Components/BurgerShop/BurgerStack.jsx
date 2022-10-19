@@ -9,7 +9,7 @@ const BurgerStack = (props) => {
             key={idx}
             idx={idx}
             ingredient={ingredient}
-            
+            removeFromBurger={props.removeFromBurger}
           />
         ))
       : <div>No ingredients in the burger yet!</div>
