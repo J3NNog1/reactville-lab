@@ -10,7 +10,7 @@ import { products } from '../../data/market-data'
 const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
   const [productCategory, setProductCategory] = useState('Produce')
-  console.log('Imported product data:::', products)
+  console.log('product category', products)
 
 
   return (
@@ -18,8 +18,12 @@ const SuperMarket = (props) => {
       <section>
         <MarketNav 
           products={products}
-          setProductCategory={setProductCategory}/>
-        <DisplayProducts />
+          setProductCategory={setProductCategory}
+          />
+        <DisplayProducts 
+          products={products}
+          productCategory={productCategory}
+          />
       </section>
 
       <Cart 
